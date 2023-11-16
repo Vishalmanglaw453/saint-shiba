@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Work+Sans:wght@400;600&display=swap');
+
+:root {
+    --fs_xsm: 14px;
+    --fs_sm: 18px;
+    --fs_md: 22px;
+    --fs_lg: 28px;
+    --fs_xl: 36px;
+    --fs_1xl: 48px;
+    --fs_2xl: 88px;
+}
+
+.fs_xsm {
+    font-size: var(--fs_xsm);
+}
+
+.fs_sm {
+    font-size: var(--fs_sm);
+}
+
+.fs_md {
+    font-size: var(--fs_md);
+}
+
+.fs_lg {
+    font-size: var(--fs_lg);
+}
+
+.fs_xl {
+    font-size: var(--fs_xl);
+}
+
+.fs_1xl {
+    font-size: var(--fs_1xl);
+}
+
+.fs_2xl {
+    font-size: var(--fs_2xl);
+}
+
+@media (max-width:768px) {
+
+    :root {
+        --fs_xsm: 14px;
+        --fs_sm: 18px;
+        --fs_md: 22px;
+        --fs_lg: 28px;
+        --fs_xl: 36px;
+        --fs_1xl: 40px;
+        --fs_2xl: 40px;
+    }
+}
