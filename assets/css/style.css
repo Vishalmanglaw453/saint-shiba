@@ -134,6 +134,7 @@
     border: 1px solid #ffffff;
     background: linear-gradient(95deg, #ffffff0d 0.97%, #ffffff00 103.14%);
     backdrop-filter: blur(16px);
+    background-color: #171616;
 }
 
 .card-pera-2 {
@@ -267,7 +268,7 @@ body {
     min-width: 800px;
 }
 
-tr {
+.bg {
     background-color: #161515;
 }
 
