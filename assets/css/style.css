@@ -44,11 +44,21 @@
     border: none;
     background: var(--Gradient-H, linear-gradient(90deg, #FFA800 0%, #F06500 100%));
     font-size: var(--fs_sm);
-
+    border: 1px solid #F27000;
     font-weight: 600;
 }
 
+.btn-Connect-Wallet:hover {
+    background: transparent;
+    color: #F27000;
+}
 
+.pos_left {
+    position: absolute;
+
+    left: -25%;
+    bottom: 0;
+}
 
 .nav_text {
     color: #ffffff;
@@ -64,7 +74,11 @@
     backdrop-filter: blur(8px);
 }
 
-.card-2 {
+.bg_color {
+    background-color: #070707;
+}
+
+.card_2 {
     display: flex;
     padding: 24px;
     flex-direction: column;
@@ -73,7 +87,7 @@
     border-radius: 10px;
     border: 1px solid #FFF;
 
-    background: linear-gradient(95deg, rgba(255, 255, 255, 0.05) 0.97%, rgba(255, 255, 255, 0.00) 103.14%);
+    background-color: linear-gradient(95deg, rgba(255, 255, 255, 0.05) 0.97%, rgba(255, 255, 255, 0.00) 103.14%);
 
     backdrop-filter: blur(16px);
 }
@@ -104,9 +118,14 @@
     border: none;
     font-family: 'Poppins', sans-serif;
     font-size: var(--fs_sm);
-
+border: 1px solid #F06500;
     font-weight: 600;
 
+}
+
+.btn-Learn:hover {
+    background: transparent;
+    color: #F06500;
 }
 
 .box-3 {
@@ -131,10 +150,16 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    border: 1px solid #ffffff;
+    border: 1px solid #3D3D3D;
     background: linear-gradient(95deg, #ffffff0d 0.97%, #ffffff00 103.14%);
     backdrop-filter: blur(16px);
     background-color: #171616;
+}
+
+.roadmap_position {
+    position: absolute;
+    right: -19%;
+    top: -15%;
 }
 
 .card-pera-2 {
@@ -237,6 +262,23 @@
     max-width: 660px;
 }
 
+
+.accordion-flush .accordion-item:first-child {
+    border-radius: 10px !important;
+    border-radius: 10px;
+    border: 1px solid #2F2E2E;
+    background: linear-gradient(95deg, rgba(255, 255, 255, 0.05) 0.97%, rgba(255, 255, 255, 0.00) 103.14%);
+    backdrop-filter: blur(16px);
+}
+
+.accordion-flush .accordion-item {
+    border-radius: 10px !important;
+
+    border: 1px solid #2F2E2E !important;
+    background: linear-gradient(95deg, rgba(255, 255, 255, 0.05) 0.97%, rgba(255, 255, 255, 0.00) 103.14%);
+    backdrop-filter: blur(16px);
+}
+
 .text_phera {
     color: #ffffff;
     font-family: 'poppins', sans-serif;
@@ -269,11 +311,11 @@ body {
 }
 
 .bg {
-    background-color: #161515;
+    background-color: black;
 }
 
 tr:hover {
-    background-color: #0C0C0C;
+    background-color: black;
 }
 
 .Roadmap {
@@ -403,17 +445,27 @@ tr:hover {
 }
 
 .nav-box {
-    width: 100%;
-    height: 70px;
+    min-width: 100%;
     max-width: 1920px;
+    height: 70px;
     background-color: black;
     position: fixed;
     z-index: 4;
 }
 
+.accordion_position {
+    position: absolute;
+    bottom: -90%;
+    right: -15%;
+}
+
 input[type="checkbox"]:checked+.sm {
     right: 0;
 
+}
+
+.pb_300 {
+    padding-bottom: 300px;
 }
 
 .display {
@@ -472,6 +524,33 @@ input[type="checkbox"]:checked+.sm {
 .accordion-button:not(.collapsed)::after {
     background-image: url(../images/bx_bx-chevron-down.png) !important;
 
+}
+
+.position_absolute_7 {
+    position: absolute;
+    top: -3%;
+    right: 5%;
+}
+
+.pb_121 {
+    padding-bottom: 150px;
+}
+
+.group_pos {
+    position: absolute;
+    bottom: 0;
+    right: -26%;
+}
+
+.position__absolute {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    bottom: 0;
+}
+
+.w_50 {
+    width: 50%;
 }
 
 @media (max-width: 400px) {
@@ -536,12 +615,46 @@ input[type="checkbox"]:checked+.sm {
         width: 100%;
     }
 
+    .roadmap_position {
+        display: none;
+    }
+
+    .accordion_position {
+        display: none;
+    }
+
+    .group_pos {
+        display: none;
+    }
+
+    .pos_left {
+        display: none;
+    }
+
+    .pt_md {
+        padding-top: 70px;
+    }
+
+    .position__absolute {
+        position: inherit;
+
+    }
+
+    .w_50 {
+        width: 100%;
+    }
 }
 
 @media (max-width:992px) {
 
     .box-3 {
         max-width: 100%;
+    }
+
+    .accordion_position {
+        position: absolute;
+        bottom: -41%;
+        right: -14%;
     }
 }
 
@@ -551,6 +664,7 @@ input[type="checkbox"]:checked+.sm {
     .display {
         display: none;
     }
+
 }
 
 @media (max-width:1220px) {
@@ -570,5 +684,50 @@ input[type="checkbox"]:checked+.sm {
         gap: 30px;
         z-index: 3;
         transition: all 200ms linear;
+        background-image: url(../images/first-img.png);
     }
+
+}
+
+@media (max-width:1420px) {
+    .accordion_position {
+        position: absolute;
+        bottom: -60%;
+        right: -14%;
+    }
+
+    .pos_left {
+        position: absolute;
+        left: -29%;
+        bottom: -10%;
+    }
+}
+
+@media (min-width:1420px) {
+    .accordion_position {
+        position: absolute;
+        bottom: -65%;
+        right: -14%;
+    }
+
+    .pos_left {
+        position: absolute;
+        left: -12%;
+        bottom: -10%;
+    }
+}
+
+@media (min-width:1920px) {
+    .accordion_position {
+        position: absolute;
+        bottom: -97%;
+        right: -14%;
+    }
+
+}
+
+@media (max-width:1920px) {}
+
+.mt_70 {
+    padding-top: 150px;
 }
