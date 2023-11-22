@@ -50,3 +50,15 @@
         --fs_2xl: 40px;
     }
 }
+
+@media (max-width:576px) {
+    :root {
+        --fs_xsm: 14px;
+        --fs_sm: 12px;
+        --fs_md: 22px;
+        --fs_lg: 28px;
+        --fs_xl: 36px;
+        --fs_1xl: 16px;
+        --fs_2xl: 40px;
+    }
+}
