@@ -755,7 +755,7 @@ input[type="checkbox"]:checked+.sm {
 @media (max-width:576px) {
     .card_2 {
         bottom: -20%;
-    }.
+    }
 
     .pt_ {
         padding-top: 400px;
