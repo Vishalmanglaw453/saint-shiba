@@ -55,7 +55,7 @@
 
 .pos_left {
     position: absolute;
-
+    opacity: 0.4;
     left: -25%;
     bottom: 0;
 }
@@ -89,11 +89,11 @@
     align-items: flex-start;
     gap: 10px;
     border-radius: 10px;
-    border: 1px solid #FFF;
+    border: 2px solid #444343;
     background: linear-gradient(95deg, rgba(255, 255, 255, 0.05) 0.97%, rgba(255, 255, 255, 0.00) 103.14%);
     backdrop-filter: blur(16px);
     position: absolute;
-    bottom: -40%;
+    bottom: -30%;
     left: 0;
 }
 
@@ -106,10 +106,17 @@
 
 .card-4 {
     border-radius: 10px;
-    border: 1px solid #ffffff;
-    background: linear-gradient(95deg, #ffffff1a 0.97%, #ffffff00 103.14%);
+    border: 2px solid #262525;
+    background: linear-gradient(95deg, rgba(255, 255, 255, 0.05) 0.97%, rgba(255, 255, 255, 0.00) 103.14%);
     backdrop-filter: blur(16px);
     padding: 12px;
+}
+
+.card-4:hover {
+    border-radius: 10px;
+    border: 2px solid #262525;
+    background: linear-gradient(95deg, rgba(255, 255, 255, 0.10) 0.97%, rgba(255, 255, 255, 0.00) 103.14%);
+    backdrop-filter: blur(16px);
 }
 
 .btn-Learn {
@@ -313,6 +320,7 @@ body {
 
 .table-min-width {
     min-width: 800px;
+    width: 100%;
 }
 
 .bg {
@@ -449,14 +457,6 @@ tr:hover {
     max-width: 1632px !important;
 }
 
-.nav-box {
-    min-width: 100%;
-    max-width: 1920px;
-    height: 70px;
-    background-color: black;
-    position: fixed;
-    z-index: 4;
-}
 
 .accordion_position {
     position: absolute;
@@ -464,20 +464,12 @@ tr:hover {
     right: -15%;
 }
 
-input[type="checkbox"]:checked+.sm {
-    right: 0;
-
-}
 
 .pb_300 {
     padding-bottom: 300px;
 }
 
-.display {
-    position: fixed;
-    z-index: 4;
-    right: 10%;
-}
+
 
 .accordion-button {
 
@@ -500,11 +492,12 @@ input[type="checkbox"]:checked+.sm {
     font-style: normal;
     font-weight: 400;
     line-height: 180%;
+    border-radius: 10px !important;
     /* 32.4px */
 }
 
 .accordion_text {
-    color: var(--white, #FFF);
+    color: var(--white, #FFF) !important;
     font-family: 'Poppins', sans-serif;
     font-size: var(--fs_md);
     font-weight: 600;
@@ -531,6 +524,11 @@ input[type="checkbox"]:checked+.sm {
 
 }
 
+.accordion-flush .accordion-item .accordion-button,
+.accordion-flush .accordion-item .accordion-button.collapsed {
+    border-radius: 10px;
+}
+
 .position_absolute_7 {
     position: absolute;
     top: -3%;
@@ -538,7 +536,7 @@ input[type="checkbox"]:checked+.sm {
 }
 
 .pb_121 {
-    padding-bottom: 150px;
+    padding-bottom: 60px;
 }
 
 .group_pos {
@@ -558,7 +556,16 @@ input[type="checkbox"]:checked+.sm {
     width: 50%;
 }
 
-@media (max-width: 400px) {
+.accordion-flush .accordion-item .accordion-button,
+.accordion-flush .accordion-item .accordion-button.collapsed {
+    border-radius: 10px !important;
+}
+
+@media (max-width: 768px) {
+
+    .text_end {
+        text-align: start;
+    }
 
     .timeline::after {
         left: 31px;
@@ -588,7 +595,7 @@ input[type="checkbox"]:checked+.sm {
 
     .Roadmap::after {
 
-        left: 8%;
+        left: 4.5%;
         margin-left: 0;
     }
 }
@@ -645,9 +652,6 @@ input[type="checkbox"]:checked+.sm {
 
     }
 
-    .pt_ {
-        padding-top: 700px;
-    }
 
     .w_50 {
         width: 100%;
@@ -665,13 +669,33 @@ input[type="checkbox"]:checked+.sm {
         bottom: -41%;
         right: -14%;
     }
-
-    .card_2 {
-        bottom: -58%;
+    .mt_70 {
+        padding-top: 70px;
     }
+  
+}
+
+.nav-box {
+    width: 100%;
+    height: 70px;
+    max-width: 100%;
+    position: fixed;
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.75);
+backdrop-filter: blur(8px);
 }
 
 
+input[type="checkbox"]:checked+.sm {
+    right: 0;
+
+}
+
+.display {
+    position: fixed;
+    z-index: 4;
+    right: 10%;
+}
 
 @media (min-width:1220px) {
     .display {
@@ -697,19 +721,22 @@ input[type="checkbox"]:checked+.sm {
         gap: 30px;
         z-index: 3;
         transition: all 200ms linear;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         background-image: url(../images/first-img.png);
     }
-
-    .card_2 {
-        bottom: -50%;
+    .nav-box {
+     
+        background: none;
+    backdrop-filter:none;
     }
+
 }
 
-@media (max-width:1200px) {
-    .card_2 {
-        bottom: -64%;
-    }
-}
+
+
+
 
 @media (max-width:1420px) {
     .accordion_position {
@@ -738,10 +765,7 @@ input[type="checkbox"]:checked+.sm {
         bottom: -10%;
     }
 
-    .card_2 {
-        bottom: -27%;
-        left: 0;
-    }
+
 }
 
 @media (min-width:1920px) {
@@ -752,26 +776,151 @@ input[type="checkbox"]:checked+.sm {
     }
 }
 
-@media (max-width:576px) {
-    .card_2 {
-        bottom: -20%;
-    }
-
-    .pt_ {
-        padding-top: 400px;
-    }
-}
-
-@media (max-width:768px) {
-    .pt_ {
-        padding-top: 400px;
-    }
-
-    .card_2 {
-        bottom: -26%;
-    }
-}
-
 .mt_70 {
     padding-top: 150px;
+}
+
+@media (min-width:320px) {
+    .card_2 {
+        bottom: -58%;
+    }
+
+    .pt_ {
+        padding-top: 636px;
+    }
+
+    .Roadmap::after {
+
+        left: 8.5%;
+        margin-left: 0;
+    }
+}
+
+@media (min-width:327px) {
+    .card_2 {
+        bottom: -52%;
+    }
+
+    .pt_ {
+        padding-top: 572px;
+    }
+}
+
+@media (min-width:348px) {
+    .card_2 {
+        bottom: -40%;
+    }
+
+    .pt_ {
+        padding-top: 441px;
+    }
+
+    .Roadmap::after {
+
+        left: 7.5%;
+        margin-left: 0;
+    }
+
+}
+
+@media (min-width:400px) {
+    .card_2 {
+        bottom: -39%;
+    }
+
+    .pt_ {
+        padding-top: 478px;
+    }
+
+    .Roadmap::after {
+
+        left: 6.5%;
+        margin-left: 0;
+    }
+
+    .Roadmap::after {
+
+        top: 4%;
+    }
+}
+
+@media (min-width:480px) {
+    .card_2 {
+        bottom: -29%;
+    }
+
+    .pt_ {
+        padding-top: 378px;
+    }
+
+    .Roadmap::after {
+
+        left: 5.5%;
+        margin-left: 0;
+    }
+}
+
+@media (min-width:576px) {
+    .card_2 {
+        bottom: -58%;
+    }
+
+    .pt_ {
+        padding-top: 718px;
+    }
+}
+
+@media (min-width:768px) {
+    .card_2 {
+        bottom: -36%;
+    }
+
+    .pt_ {
+        padding-top: 612px;
+    }
+
+    .Roadmap::after {
+
+        left: 50%;
+        margin-left: 0;
+    }
+}
+
+@media (min-width:992px) {
+    .card_2 {
+        bottom: -66%;
+    }
+
+    .pt_ {
+        padding-top: 512px;
+    }
+}
+
+@media (min-width:1200px) {
+    .card_2 {
+        bottom: -45%;
+    }
+
+    .pt_ {
+        padding-top: 400px;
+    }
+
+    .pb_121 {
+        padding-bottom: 80px;
+    }
+
+    .Roadmap::after {
+        left: 49.9%;
+        margin-left: 0;
+    }
+}
+
+@media (min-width:1400px) {
+    .card_2 {
+        bottom: -33%;
+    }
+
+    .pb_121 {
+        padding-bottom: 258px;
+    }
 }
